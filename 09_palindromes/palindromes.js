@@ -1,4 +1,14 @@
-const palindromes = function () {
+const palindromes = function (string) {
+    let array = string
+        .toLowerCase()
+        .split("");
+
+    const unacknowledged = [" ", ".", ",", "!"];
+
+    array = array.filter((item => !unacknowledged.includes(item)));
+    
+    return array.join() == array.reverse().join();
+
 
 };
 
